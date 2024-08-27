@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
-const tenderRoutes = require("./routes/tender")
+const tenderRoutes = require("./routes/tender");
 const resetRoutes = require("./routes/passReset");
 const paymentRoutes = require("./routes/payment");
 const mainRoutes = require("./routes/main");
@@ -114,7 +114,7 @@ app.use((req, res, next) => {
 
 app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
-app.use("/tenders" , tenderRoutes);
+app.use("/tenders", tenderRoutes);
 app.use("/password-reset", resetRoutes);
 app.use("/subscriptions", paymentRoutes);
 app.use("/", mainRoutes);

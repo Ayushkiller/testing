@@ -1,2 +1,23 @@
 <% layout("layout/boilerplate") %>
-<h1>Index Page</h1>
+<h1 class="my-4 text-center">Latest Tenders</h1>
+<hr />
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let tender of tenders) {%>
+      <tr>
+        <td><a href="/tenders/<%=tender._id %>"><%= tender.title %></a></td>
+        <td><%= tender.description %></td>
+        <td><%= tender.category %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>

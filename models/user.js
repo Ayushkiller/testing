@@ -24,7 +24,7 @@ const userSchema = new Schema({
   preferences: {
     type: String,
     required: true,
-    enum: ["goverment-tenders", "private-tenders"],
+    enum: ["goverment-tenders"],
     lowercase: true,
   },
   resetPasswordOTP: String,

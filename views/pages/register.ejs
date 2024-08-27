@@ -146,7 +146,6 @@
           >
             <option value="">Select preference</option>
             <option value="goverment-tenders" <%= formData.preferences === 'goverment-tenders' ? 'selected' : '' %>>Government Tenders</option>
-            <option value="private-tenders" <%= formData.preferences === 'private-tenders' ? 'selected' : '' %>>Private Tenders</option>
           </select>
           <% if (errorMessages.find(e => e.includes('Preferences'))) { %>
             <div class="invalid-feedback">
