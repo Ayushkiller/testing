@@ -1,0 +1,20 @@
+<% layout("layout/boilerplate") %> <% if(currentUser && success.length &&
+aadar.length) {%>
+<div class="alert alert-success" role="alert">
+  <%=success +" " + currentUser.username +" "+ aadar%>
+</div>
+<% } else if(success && success.length){%>
+<div class="alert alert-success" role="alert"><%=success%></div>
+<% } %>
+<div class="container home-page vh-100">
+  <h1>This is my Home Page</h1>
+  <% if(currentUser) {%>
+  <a href="/documents">Documents Upload</a>
+  <% } %>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+      <h2 class="text-center">All Tenders</h2>
+      <ul class="list-group"></ul>
+    </div>
+  </div>
+</div>
