@@ -111,7 +111,9 @@ app.use((req, res, next) => {
   res.locals.paymentSuccess = req.flash("paymentSuccess");
   next();
 });
-
+app.get("/home", (req, res) => {
+  res.render("pages/home");
+});
 app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use("/tenders", tenderRoutes);
