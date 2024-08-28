@@ -14,58 +14,7 @@
       rel="stylesheet"
     />
     <style>
-      body {
-        font-family: "Montserrat", sans-serif;
-      }
-
-      .pricing-header {
-        max-width: 700px;
-        margin: 0 auto 40px;
-      }
-
-      /* .card {
-        border: none;
-        border-radius: 15px;
-        box-shadow:  8px 8px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      } */
-
-      .card {
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05),
-          /* Downward shadow */ 0 -8px 16px rgba(0, 0, 0, 0.05),
-          /* Upward shadow */ 8px 0 16px rgba(0, 0, 0, 0.01),
-          /* Right shadow */ -8px 0 16px rgba(0, 0, 0, 0.1); /* Left shadow */
-        transition: transform 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-      }
-
-      .card-title {
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .card-price {
-        font-size: 32px;
-        font-weight: bold;
-        color: #007bff;
-      }
-
-      .card-feature {
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-
-      .btn-plan {
-        border-radius: 30px;
-        padding: 10px 25px;
-        font-weight: bold;
-        font-size: 16px;
-      }
+      
     </style>
   </head>
   <body class="d-flex flex-column vh-100 bg-light">
@@ -101,6 +50,28 @@
           );
         });
       })();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const heroSection = document.querySelector(".hero-section");
+        heroSection.classList.add("visible");
+      });
+
+      document.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll(
+          ".mission-section, .services-section, .values-section, .testimonials-section"
+        );
+        const triggerBottom = (window.innerHeight / 5) * 4;
+
+        sections.forEach((section) => {
+          const sectionTop = section.getBoundingClientRect().top;
+
+          if (sectionTop < triggerBottom) {
+            section.classList.add("visible");
+          }
+        });
+      });
     </script>
   </body>
 </html>
