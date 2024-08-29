@@ -1,17 +1,17 @@
 body {
-  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Mobile adjustments */
+.text-justify {
+  text-align: justify;
+}
+.text-justify::after {
+  content: "";
+  width: 100%;
+}
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 576px) {
-  body {
-    font-size: 12px;
+  .text-justify {
+    text-align: left;
   }
 }
 
@@ -93,9 +93,6 @@ body {
   color: white;
   padding: 20px 0;
   text-align: center;
-}
-body {
-  font-family: "Montserrat", sans-serif;
 }
 
 .pricing-header {
