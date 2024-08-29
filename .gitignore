@@ -1,2 +1,6 @@
 .env
 node_modules/
+tender.json
+seedTenders.js
+states-and-districts.json
+register.html

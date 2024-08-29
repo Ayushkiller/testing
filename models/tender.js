@@ -2,18 +2,41 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const tenderSchema = new Schema({
+  tender_id: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   title: {
     type: String,
     required: true,
   },
-  description: {
+  org_name: {
     type: String,
     required: true,
   },
   category: {
     type: String,
     required: true,
-    enum: ["all", "specific"],
+  },
+  price: {
+    type: String,
+    required: true,
+  },
+  address: {
+    type: String,
+    required: true,
+  },
+  closing_date: {
+    type: String,
+    required: true,
+  },
+  boq: {
+    type: String,
+    required: true,
+  },
+  undertaking: {
+    type: String,
   },
 });
 
