@@ -32,6 +32,14 @@ router.post(
   })
 );
 
+router.get("/privacy-policy", (req, res) => {
+  res.render("pages/privacy-policy");
+});
+
+router.get("/contact", (req, res) => {
+  res.render("pages/contact");
+});
+
 router.get(
   "/logout",
   wrapAsync(async (req, res) => {
