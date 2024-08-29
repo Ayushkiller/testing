@@ -9,11 +9,11 @@ body {
   content: "";
   width: 100%;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .text-justify {
     text-align: left;
   }
-}
+} */
 
 .hero-section {
   background: url("../images/home-bg.jpg") center center/cover no-repeat;
@@ -161,4 +161,7 @@ body {
   /* transition: transform 0.3s ease; */
   border: 1px solid black;
   padding: 2rem;
+}
+.core {
+  box-shadow: none;
 }
