@@ -20,6 +20,25 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    @media (max-width: 768px) {
+      body {
+        font-size: 0.7em;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      table {
+        font-size: 0.85em;
+      }
+
+      .table-responsive {
+        overflow-x: auto;
+      }
+    }
+  </style>
   <body class="d-flex flex-column vh-100 bg-light">
     <%-include("../partials/navbar") %> <%-include("../partials/flash") %>
     <main><%-body %></main>

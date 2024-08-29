@@ -1,6 +1,8 @@
 <% layout("layout/boilerplate") %>
+
 <h1 class="my-4 text-center">Latest Tenders</h1>
 <hr />
+
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
     <thead class="table-dark">
@@ -8,16 +10,18 @@
         <th scope="col">Title</th>
         <th scope="col">Department</th>
         <th scope="col">Price</th>
-        <th scope="col">Category</th>
+        <th scope="col">Closing Date</th>
       </tr>
     </thead>
     <tbody>
-      <% for(let tender of tenders) {%>
+      <% for(let tender of tenders) { %>
       <tr>
-        <td><a href="/tenders/<%=tender._id %>"><%= tender.title %></a></td>
+        <td>
+          <a href="/tenders/<%= tender._id %>"><%= tender.title %></a>
+        </td>
         <td class="text-center"><%= tender.org_name %></td>
-        <td><%=tender.price %></td>
-        <td><%= tender.category %></td>
+        <td><%= tender.price %></td>
+        <td><%= tender.closing_date %></td>
       </tr>
       <% } %>
     </tbody>
