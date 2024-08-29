@@ -101,6 +101,7 @@ body {
     /* Upward shadow */ 8px 0 16px rgba(0, 0, 0, 0.01),
     /* Right shadow */ -8px 0 16px rgba(0, 0, 0, 0.1); /* Left shadow */
   transition: transform 0.3s ease;
+  border: 1px solid black;
 }
 
 .card:hover {
@@ -128,4 +129,22 @@ body {
   padding: 10px 25px;
   font-weight: bold;
   font-size: 16px;
+}
+.logo {
+  max-width: 60px;
+  border-radius: 0.3rem;
+}
+.title-logo {
+  border-radius: 1rem;
+}
+.shadow-dedo {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05),
+    /* Downward shadow */ 0 -8px 16px rgba(0, 0, 0, 0.05),
+    /* Upward shadow */ 8px 0 16px rgba(0, 0, 0, 0.01),
+    /* Right shadow */ -8px 0 16px rgba(0, 0, 0, 0.1); /* Left shadow */
+  /* transition: transform 0.3s ease; */
+  border: 1px solid black;
+  padding: 2rem;
 }
