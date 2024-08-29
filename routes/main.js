@@ -31,7 +31,7 @@ router.post(
     res.send("Uploaded");
   })
 );
-
+//privacy routes
 router.get("/privacy-policy", (req, res) => {
   res.render("pages/privacy-policy");
 });
